@@ -1,0 +1,348 @@
+/* 밀크터치 | index.css */
+
+body {}
+
+/* ==================================================== 헤더 */
+header {
+    width: 100vw; padding: 20px 60px; 
+    position: fixed; top:0;
+    z-index: 900;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+/* ================================== 주메뉴 */
+header nav {gap: 50px;}
+header nav a {}
+
+/* ============================ 모바일 태블릿 전체메뉴 */
+header .m_t_menu_btn {display: none;}
+header .m_t_menu_btn img {}
+
+/* =================================== 데스크탑 전체 메뉴 */
+header .menu_popup {
+    width: 380px; height:1200px;
+    position: fixed; top: 78px; left: 0;
+    background-color: #fff;
+    padding: 132px 60px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform: translateX(-380px);
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+header .menu_popup.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+header .menu_popup .menu_popup_close_btn {
+    width: 32px; height: 32px;
+    position: absolute; top: 50px; right: 50px;
+}
+header .menu_popup .menu_popup_close_btn img {width: 100%;}
+header .menu_popup .shop_menu_list {gap: 40px;}
+header .menu_popup .shop_menu_list li {}
+header .menu_popup .shop_menu_list li a {}
+header .menu_popup .shop_menu_list li a {}
+
+/* =================================== 모바일, 태블릿 전체 메뉴 */
+header .m_t_menu_popup {display: none;}
+header .m_t_menu_popup .menu_popup_close_btn {}
+header .m_t_menu_popup .menu_popup_close_btn img {}
+header .m_t_menu_popup .m_t_menu_list {}
+header .m_t_menu_popup .m_t_menu_list li {}
+header .m_t_menu_popup .m_t_menu_list li a {}
+header .m_t_menu_popup .m_t_menu_list li a img {}
+
+header .brand_logo {
+    width: 180px; height: 60px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+header .brand_logo a {width: 100%; height: 100%; display: block;}
+header .brand_logo a img {width: 100%; height: 100%; object-fit: cover;}
+
+/* ================================== 서브메뉴 */
+header .nav_left {gap: 15px; }
+header .nav_left a {}
+header .nav_left .login {position: relative;}
+header .nav_left .login::after {
+    content: ''; display: block;
+    width: 1px; height: 15px;
+    background: #aaa;
+    position: absolute;
+    right: -9px; top: 1px;
+}
+header .nav_left .join {}
+/* ================================= 아이콘 메뉴 */
+header .nav_left .left_icon_btn {gap: 20px;}
+header .nav_left .left_icon_btn .search_btn {}
+header .nav_left .left_icon_btn .search_btn img {}
+header .nav_left .left_icon_btn .login_join_icon_btn {display: none;}
+header .nav_left .left_icon_btn .login_join_icon_btn img {}
+header .nav_left .left_icon_btn .basket_btn {}
+header .nav_left .left_icon_btn .basket_btn img {}
+
+/* ==================================== 검색창 */
+header .nav_left .search_popup {
+    position: fixed; top: 78px; right: 0;
+    background-color: #fff;
+    width: 600px; height: 1200px;
+    padding: 116px 60px;
+    opacity: 0;
+    transform: translateX(600px);
+    visibility: hidden;
+    transition: all 0.6s ease;
+}
+header .nav_left .search_popup.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+header .nav_left .search_popup .menu_popup_close_btn {
+    position: absolute; top: 50px; right: 50px;
+}
+header .nav_left .search_popup .search_input {margin-bottom: 30px;}
+header .nav_left .search_popup .search_input input {flex: 1;}
+header .nav_left .search_popup .search_input img {}
+header .nav_left .search_popup h2 {margin-bottom: 15px;}
+header .nav_left .search_popup .popular_keyword {margin-bottom: 35px;}
+header .nav_left .search_popup .popular_keyword span {}
+header .nav_left .search_popup .event_thum {width: 460px; height: 500px;}
+header .nav_left .search_popup .event_thum img {width: 100%;}
+
+
+/* ======================================================= 메인 */
+
+main {}
+
+/* ====================================1행 히어로 */
+
+#hero_sec {}
+#hero_sec .hero_wrap {}
+#hero_sec .hero_wrap .swiper-wrapper {}
+#hero_sec .hero_wrap .swiper-wrapper .swiper-slide {position: relative;}
+#hero_sec .hero_wrap .swiper-wrapper .hero1 {
+    background-image: url(../images/hero/hero2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw; height: 955px;
+}
+#hero_sec .hero_wrap .swiper-wrapper .hero2 {
+    background-image: url(../images/hero/hero1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw; height: 955px;
+}
+#hero_sec .hero_wrap .swiper-wrapper .swiper-slide .hero_text {
+    position: absolute;
+    top: 450px; left: 250px;
+}
+#hero_sec .hero_wrap .swiper-wrapper .swiper-slide .hero_text .hero_title1 {margin-bottom: 10px;}
+#hero_sec .hero_wrap .swiper-wrapper .swiper-slide .hero_text h2 {margin-bottom: 10px;}
+#hero_sec .hero_wrap .swiper-wrapper .swiper-slide .hero_text .hero_title2 {}
+
+/* ====================================2행 베스트 */
+
+main #best_sec {padding: 80px 140px;}
+main #best_sec > h2 {text-align: center; margin-bottom: 7px;}
+main #best_sec > p {text-align: center; margin-bottom: 40px;}
+main #best_sec .best_wrap {}
+main #best_sec .best_wrap .swiper-wrapper {}
+main #best_sec .best_wrap .swiper-slide {}
+
+/* =================================== 상품리스트  */
+main #best_sec .best_wrap .swiper-slide .best_pd {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);    
+    gap: 50px 27.5px;
+    margin-right: 20px;
+}
+main #best_sec .best_wrap .swiper-slide .best_pd li {}
+main #best_sec .best_wrap .swiper-slide .best_pd li .img_box {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 240px; height: 280px;
+    margin-bottom: 10px;
+}
+main #best_sec .best_wrap .swiper-slide .best_pd li .img_box img {width: 100%; height: 100%; object-fit: cover;}
+main #best_sec .best_wrap .swiper-slide .best_pd li .info_box {}
+main #best_sec .best_wrap .swiper-slide .best_pd li .info_box .product_name {margin-bottom: 7px;}
+main #best_sec .best_wrap .swiper-slide .best_pd li .info_box .price_area {margin-bottom: 7px;}
+main #best_sec .best_wrap .swiper-slide .best_pd li .info_box .price_area .discount {}
+main #best_sec .best_wrap .swiper-slide .best_pd li .info_box .price_area .price {}
+
+/* ====================================컬러칩 */
+main #best_sec .best_wrap .swiper-wrapper .swiper-slide.best1 .best_pd .product_item .info_box .color_chip_container {
+    display: flex; gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+main #best_sec .best_wrap .swiper-wrapper .swiper-slide.best1 .best_pd .product_item .info_box .color_chip_container .color_chip {
+    display: block; 
+    width: 14px; height: 14px;
+    border-radius: 20px;
+}
+main #best_sec .best_wrap .swiper-slide .best_pd li .info_box .color_chip_container .color_text {}
+
+main #best_sec .best_wrap .best1 .best_thum {
+    background-image: url(../images/banner/bnr1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 570px; height: 762px;
+}
+main #best_sec .best_wrap .best2 .best_thum {
+    background-image: url(../images/banner/bnr1_2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 570px; height: 762px;
+}
+
+/* ==================================================3행 hot */
+#hot_sec{padding: 80px 0;}
+#hot_sec > h2 {text-align: center; margin-bottom: 7px;}
+#hot_sec > p {text-align: center; margin-bottom: 40px;}
+#hot_sec .hot_wrap {}
+#hot_sec .hot_wrap .hot_thum {
+    background-image: url(../images/banner/bnr2.jpg);
+    background-position: -660px center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 630px; height: 650px;
+}
+
+/* =================================================상품 슬라이드 */
+#hot_sec .hot_wrap .hot_swiper {margin-left: 12px;}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper {}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li {}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .img_box {margin-bottom: 20px; width: 340px; height: 480px;}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .img_box img {width: 100%;}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .info_box {}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .info_box .product_name {font-size: 1rem; margin-bottom: 15px;}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .info_box .price_area {margin-bottom: 15px;}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .info_box .price_area .discount {}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .info_box .price_area .price {}
+
+/* =================================================컬러칩 */
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .info_box .color_chip_container {
+    display: flex; gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .info_box .color_chip_container .color_chip {
+    display: block; 
+    width: 14px; height: 14px;
+    border-radius: 20px;
+}
+#hot_sec .hot_wrap .hot_swiper .swiper-wrapper li .info_box .color_chip_container .color_text {}
+
+/* ======================================================== 4행 띠배너 */
+
+#line_bnr_sec {padding: 70px 0;}
+#line_bnr_sec .line_bnr_wrap {}
+#line_bnr_sec .line_bnr_wrap a {
+    display: block;
+    width: 100%;
+    
+}
+#line_bnr_sec .line_bnr_wrap a img {width: 100%; height: 220px; object-fit: cover;}
+
+/* ====================================모바일 */
+#line_bnr_sec .line_bnr_m {display: none;}
+#line_bnr_sec .line_bnr_m .swiper-wrapper {}
+#line_bnr_sec .line_bnr_m .swiper-wrapper .swiper-slide {}
+#line_bnr_sec .line_bnr_m .swiper-wrapper .swiper-slide img {}
+
+/* ==================================================5행 new */
+#new_sec{padding: 80px 0;}
+#new_sec > h2 {text-align: center; margin-bottom: 7px;}
+#new_sec > p {text-align: center; margin-bottom: 40px;}
+#new_sec .new_wrap {flex-flow: row-reverse;}
+#new_sec .new_wrap .new_thum {
+    background-image: url(../images/banner/bnr3.jpg);
+    background-position: -720px center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 755px; height: 650px;
+}
+
+/* =================================================상품 슬라이드 */
+#new_sec .new_wrap .new_swiper {margin-left: 12px;}
+#new_sec .new_wrap .new_swiper .swiper-wrapper {}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li {}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .img_box {margin-bottom: 20px; width: 340px; height: 480px;}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .img_box img {width: 100%;}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .info_box {}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .info_box .product_name {font-size: 1rem; margin-bottom: 15px;}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .info_box .price_area {margin-bottom: 15px;}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .info_box .price_area .discount {}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .info_box .price_area .price {}
+
+/* =================================================컬러칩 */
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .info_box .color_chip_container {
+    display: flex; gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .info_box .color_chip_container .color_chip {
+    display: block; 
+    width: 14px; height: 14px;
+    border-radius: 20px;
+}
+#new_sec .new_wrap .new_swiper .swiper-wrapper li .info_box .color_chip_container .color_text {}
+
+/* ==============================================6행 이벤트 */
+#event_sec {padding-top: 80px;}
+#event_sec h2 {text-align: center; margin-bottom: 7px;}
+#event_sec p {text-align: center; margin-bottom: 40px;}
+/* ================================이벤트 */
+#event_sec .event_wrap {}
+#event_sec .event_wrap a {
+    display: block;
+    width: 100%;height: 550px;
+    overflow: hidden;
+}
+#event_sec .event_wrap a img {width: 100%; height: 100%;}
+/* ================================슬로건 */
+#event_sec .slogan {
+    background-color: #FFB5B5;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+#event_sec .slogan p {font-size: 11.25rem; color: rgba(255, 255, 255, 0.3); font-family: 'Noto Serif KR', serif;}
+#event_sec .slogan p:nth-child(1) {position: absolute; top: -37px; left: -20px;}
+#event_sec .slogan p:nth-child(2) {position: absolute; bottom: -48px; right: 10px;}
+
+/* =============================================== 푸터 */
+footer {padding: 100px 240px;}
+
+/* ==================================푸터 상단 */
+footer .footer_top {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 40px;
+}
+footer .footer_top h1 {}
+footer .footer_top h1 a {display: block; width: 214px; height: 48px;}
+footer .footer_top h1 a img {width: 100%; height: 100%; object-fit: cover;}
+footer .footer_top .sns_group {width: 266px;}
+footer .footer_top .sns_group a {display: block; width: 42px; height: 42px;}
+footer .footer_top .sns_group a img {width: 100%;}
+
+/* ==================================푸터 하단 */
+footer .footer_btm {}
+footer .footer_btm address {}
+footer .footer_btm address p {line-height: 1.5;}
+footer .footer_btm address .company {}
+footer .footer_btm .cs_info {gap: 12px;}
+footer .footer_btm .cs_info h3 {}
+footer .footer_btm .cs_info .cs_num {}
+footer .footer_btm .cs_info .cs_time {}
+footer .footer_btm .cs_info .cs_holiday {line-height: 1.5;}

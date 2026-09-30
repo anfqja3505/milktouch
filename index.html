@@ -15,6 +15,11 @@
     <meta name="description" content="믿고쓰는 밀크터치, 진정, 보습 스킨케어, 메이크업 ,뷰티 소품까지 밀크터치로 당신의 뷰티를 완성하세요.">
     <meta name="keywords" content="밀크터치, 스킨케어, 화장품, 색조, 메이크업, 뷰티, 보습, 진정, milktouch, 소품, 아이섀도우, 틴트, 세럼, 아이브로우, 쿠션, 립글로스, 프라이머, 파우더, 팔레트">
     <title>밀크터치</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"/>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"/>
     <!-- GSAP 메인 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <!-- ScrollTrigger 플러그인 -->
@@ -35,23 +40,64 @@
     <script src="./scripts/index.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="flex_row_b_c">
+        <nav class="flex_row_c_c">
             <a href="#">SHOP</a>
             <a href="#">EVENT</a>
             <a href="#">MEMBERSHIP</a>
             <a href="#">COMMUNITY</a>
             <a href="#">BRAND</a>
         </nav>
-        <div class="m_t_menu_btn"><img src="" alt="전체메뉴"></div><!-- 태블릿 모바일 전체메뉴 -->
+        <div class="m_t_menu_btn"><img src="./images/icon/m_t_menu.svg" alt="전체메뉴"></div><!-- 태블릿 모바일 전체메뉴 -->
+        <!-- shop 눌렀을때 나오는 전체메뉴 -->
+        <div class="menu_popup">
+            <button type="button" class="menu_popup_close_btn"><img src="./images/icon/menu_close_btn.svg" alt=""></button><!-- 전체메뉴 닫기 버튼 -->
+            <ul class="shop_menu_list flex_col_s_s">
+                <li><a href="#">SKIN CARE</a></li>
+                <li><a href="#">BASE</a></li>
+                <li><a href="#">LIP</a></li>
+                <li><a href="#">EYE</a></li>
+                <li><a href="#">CHEEK</a></li>
+                <li><a href="#">ACC</a></li>
+            </ul>
+        </div>
+        <!-- 모바일 태블릿 전체메뉴 눌렀을때 나오는 전체 메뉴 -->
+        <div class="m_t_menu_popup">
+            <button type="button" class="menu_popup_close_btn"><img src="./images/icon/menu_close_btn.svg" alt=""></button><!-- 전체메뉴 닫기 버튼 -->
+            <ul class="m_t_menu_list">
+                <li><a href="#">SHOP</a><img src="./images/icon/menu_open_btn.svg" alt="shop 메뉴 펼치기"></li>
+                <li><a href="#">EVENT</a></li>
+                <li><a href="#">MEMBERSHIP</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+                <li><a href="#">BRAND</a></li>
+            </ul>
+        </div>
         <h1 class="brand_logo"><a href="index.html"><img src="./images/logo/logo.png" alt="밀크터치"></a></h1>
-        <div class="nav_left">
+        <div class="nav_left flex_row_c_c">
             <a href="#" class="login">LOGIN</a>
-            <a href="#" class="JOIN">JOIN</a>
-            <div class="left_icon_btn">
-                <a href="#" class="search_btn"><img src="./images/icon/search_btn.svg" alt="검색"></a>
+            <a href="#" class="join">JOIN</a>
+            <div class="left_icon_btn flex_row_c_c">
+                <button type="button" href="#" class="search_btn"><img src="./images/icon/search_btn.svg" alt="검색"></button>
                 <a href="#" class="login_join_icon_btn"><img src="./images/icon/login_t_m.svg" alt="로그인 및 회원가입"></a><!-- 태블릿 모바일 내정보 -->
                 <a href="#" class="basket_btn"><img src="./images/icon/basket_btn.svg" alt="장바구니"></a>
+            </div>
+            <!-- 검색버튼 눌렀을 때 나오는 검색창(공통) -->
+            <div class="search_popup">
+                <button type="button" class="menu_popup_close_btn"><img src="./images/icon/menu_close_btn.svg" alt=""></button><!-- 검색창 닫기 버튼 -->
+                <div class="search_input flex_row_c_c">
+                    <input type="text" placeholder="“무엇을 찾아드릴까요?”" autofocus>
+                    <img src="./images/icon/search_btn.svg" alt="검색하기">
+                </div>
+                <h2>인기 키워드</h2>
+                <div class="popular_keyword">
+                    <span>#듀스테인</span>
+                    <span>#선크림</span>
+                    <span>#틴트</span>
+                    <span>#서양송악</span>
+                    <span>#팔레트</span>
+                    <span>#글리터</span>
+                </div>
+                <p class="event_thum"><img src="./images/event/event2.jpg" alt="듀 스테인 쉬어 립글로스 리뷰 이벤트"></p>
             </div>
         </div>
     </header>
@@ -61,29 +107,118 @@
             <div class="swiper hero_wrap">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide hero1">
-                        <p>Silver Ceil Tissue Off Lip Tattoo</p>
-                        <h2>실버 베일 티슈 오프 립 타투</h2>
-                        <p>#10초립타투 #올영런칭 #6colors</p>
+                        <div class="hero_text">
+                            <p class="hero_title1">Silver Ceil Tissue Off Lip Tattoo</p>
+                            <h2>실버 베일 티슈 오프 립 타투</h2>
+                            <p class="hero_title2">#10초립타투 #올영런칭 #6colors</p>
+                        </div>
                     </div>
                     <div class="swiper-slide hero2">
-                        <p>Blur & Glow Skin Filter Primer</p>
-                        <h2>블러 & 글로우 필터 프라이머</h2>
-                        <p>#모공필터 #조명필터 #모공케어</p>
+                        <div class="hero_text">
+                            <p class="hero_title1">Blur & Glow Skin Filter Primer</p>
+                            <h2>블러 & 글로우 필터 프라이머</h2>
+                            <p class="hero_title2">#모공필터 #조명필터 #모공케어</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section><!-- e:hero_sec -->
         <section id="best_sec">
-            <div class="swiper best_wrap">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide best1">
-                        <ul class="best_pd"><!-- js 복제 예정 --></ul>
-                        <div class="best_thum"></div>
+                <h2>BEST</h2>
+                <p>처음부터 지금까지, 변함없이 든든한 원픽</p>
+                <div class="swiper best_wrap">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide best1 flex_row_c_s"><!-- 메이크업 -->
+                            <ul class="best_pd"><!-- js 복제 예정 --></ul>
+                            <div class="best_thum"></div>
+                        </div>
+                        <div class="swiper-slide best2 flex_row_c_s"><!-- 스킨케어 -->
+                            <ul class="best_pd"><!-- js 복제 예정 --></ul>
+                            <div class="best_thum"></div>
+                        </div>
                     </div>
+                </div>
+        </section>
+        <section id="hot_sec">
+            <h2>#HOT</h2>
+            <p>지금 이 순간, 가장 뜨겁게 불붙은 아이템</p>
+            <div class="hot_wrap flex_row_c_s">
+                <div class="hot_thum"></div>
+                <div class="swiper hot_swiper">
+                    <ul class="swiper-wrapper">
+                        <!-- js 복제 -->
+                    </ul>
                 </div>
             </div>
         </section>
+        <section id="line_bnr_sec">
+            <div class="line_bnr_wrap flex_row_c_c">
+                <a href="#"><img src="./images/lineBanner/lineBnr1_m.png" alt="카카오톡 채널 추가하고 2000원 받기"></a>
+                <a href="#"><img src="./images/lineBanner/lineBnr2_m.png" alt="회원가입 시 2000원 즉시 할인 혜택"></a>
+            </div>
+            <div class="swiper line_bnr_m">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/lineBanner/lineBnr1_m.png" alt="카카오톡 채널 추가하고 2000원 받기"></div>
+                    <div class="swiper-slide"><img src="./images/lineBanner/lineBnr2_m.png" alt="회원가입 시 2000원 즉시 할인 혜택"></div>
+                </div>
+            </div>
+        </section>
+        <section id="new_sec">
+            <h2>#NEW</h2>
+            <p>설렘 주의! 새로 입고된 아이템들</p>
+            <div class="new_wrap flex_row_c_s">
+                <div class="new_thum"></div>
+                <div class="swiper new_swiper">
+                    <ul class="swiper-wrapper">
+                        <!-- js 복제 -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="event_sec">
+            <h2>#EVENT</h2>
+            <p>놓치면 아쉬울 설렘 가득한 이벤트</p>
+            <div class="event_wrap flex_row_c_c">
+                <a href="#"><img src="./images/event/event1.jpg" alt="듀 스테인 쉬어 립글로스 민지 콜라보 이벤트"></a>
+                <a href="#"><img src="./images/event/event2.jpg" alt="듀 스테인 쉬어 립글로스 리뷰 이벤트"></a>
+                <a href="#"><img src="./images/event/event3.jpg" alt="듀 스테인 쉬어 립글로스 구매 이벤트"></a>
+            </div>
+            <div class="slogan">
+                <p>For Your</p>
+                <p>Shining Day</p>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer_top flex_row_b_c">
+            <h1><a href="index.html"><img src="./images/logo/logo.png" alt="밀크터치"></a></h1>
+            <div class="sns_group flex_row_b_c">
+                <a href="#"><img src="./images/sns/instagram.svg" alt="인스타그램"></a>
+                <a href="#"><img src="./images/sns/kakao.svg" alt="카카오톡"></a>
+                <a href="#"><img src="./images/sns/tiktok.svg" alt="틱톡"></a>
+                <a href="#"><img src="./images/sns/youtube.svg" alt="유튜브"></a>
+                <a href="#"><img src="./images/sns/x.svg" alt="X"></a>
+            </div>
+        </div>
+        <div class="footer_btm flex_row_b_c">     
+            <address>
+                <p class="company">(주)올리브인터내셔널</p>
+                <p>대표 : 이진호</p>
+                <p>사업자 등록번호 : 801-88-00982</p>
+                <p>통신판매업 신고번호 : 제2021-서울강남-04461호 [사업자정보확인]</p>
+                <p>개인정보관리책임자 : 한송이 / syhan@oliveinter.com</p>
+                <p>주소 : 서울 서초구 서초대로 398 BNK디지털타워 14F, 올리브인터내셔널</p>
+                <p>Copyright by (주)올리브인터내셔널. All rights reserved.</p>
+            </address>
+            <div class="cs_info flex_col_s_e">
+                <h3>고객센터</h3>
+                <p class="cs_num">1522-5378</p>
+                <div class="cs_date flex_col_s_e">
+                    <p class="cs_time">MON - FRI AM 10:00 - PM 05:00</p>
+                    <p class="cs_holiday">SAT, SUN, HOLIDAY OFF</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
