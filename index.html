@@ -34,8 +34,8 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/var.css">
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/animation.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <script src="./scripts/database.js"></script>
     <script src="./scripts/index.js" defer></script>
 </head>
@@ -48,7 +48,7 @@
             <a href="#">COMMUNITY</a>
             <a href="#">BRAND</a>
         </nav>
-        <div class="m_t_menu_btn"><img src="./images/icon/m_t_menu.svg" alt="전체메뉴"></div><!-- 태블릿 모바일 전체메뉴 -->
+        <button type="button" class="m_t_menu_btn"><img src="./images/icon/m_t_menu.svg" alt="전체메뉴"></button><!-- 태블릿 모바일 전체메뉴 -->
         <!-- shop 눌렀을때 나오는 전체메뉴 -->
         <div class="menu_popup">
             <button type="button" class="menu_popup_close_btn"><img src="./images/icon/menu_close_btn.svg" alt=""></button><!-- 전체메뉴 닫기 버튼 -->
@@ -64,7 +64,7 @@
         <!-- 모바일 태블릿 전체메뉴 눌렀을때 나오는 전체 메뉴 -->
         <div class="m_t_menu_popup">
             <button type="button" class="menu_popup_close_btn"><img src="./images/icon/menu_close_btn.svg" alt=""></button><!-- 전체메뉴 닫기 버튼 -->
-            <ul class="m_t_menu_list">
+            <ul class="m_t_menu_list flex_col_s_s">
                 <li><a href="#">SHOP</a><img src="./images/icon/menu_open_btn.svg" alt="shop 메뉴 펼치기"></li>
                 <li><a href="#">EVENT</a></li>
                 <li><a href="#">MEMBERSHIP</a></li>

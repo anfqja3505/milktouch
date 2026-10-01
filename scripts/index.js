@@ -5,21 +5,29 @@ const shop_btn = document.querySelector('nav #shop_btn') // shop 버튼
 const menu_popup_close_btn = document.querySelectorAll('.menu_popup_close_btn') // 닫기 버튼
 const search_btn = document.querySelector('.search_btn') // 검색버튼
 const search_popup = document.querySelector('.search_popup') //검색창
+const m_t_menu_popup = document.querySelector('.m_t_menu_popup'); // 모바일, 태블릿 전체메뉴창
+const m_t_menu_btn = document.querySelector('.m_t_menu_btn'); // 모바일, 태블릿 전체메뉴버튼
 
 gsap.registerPlugin(ScrollTrigger);
 
 //====================================헤더
 //데스크탑 전체메뉴
 shop_btn.addEventListener('click',()=>{
+    search_popup.classList.remove('active');
+    m_t_menu_popup.classList.remove('active')
+    menu_popup.classList.toggle('active')
+})
+//모바일, 태블릿 전체메뉴
+m_t_menu_btn.addEventListener('click',()=>{
     menu_popup.classList.remove('active');
     search_popup.classList.remove('active');
-    menu_popup.classList.toggle('active')
+    m_t_menu_popup.classList.toggle('active')
 })
 
 // 검색 팝업
 search_btn.addEventListener('click',()=>{
     menu_popup.classList.remove('active');
-    search_popup.classList.remove('active');
+    m_t_menu_popup.classList.remove('active')
     search_popup.classList.toggle('active')
 })
 
@@ -28,6 +36,7 @@ menu_popup_close_btn.forEach(btn => {
     btn.addEventListener('click', () => {
         menu_popup.classList.remove('active');
         search_popup.classList.remove('active');
+        m_t_menu_popup.classList.remove('active')
     });
 });
 
