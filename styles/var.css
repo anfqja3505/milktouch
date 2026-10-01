@@ -1,5 +1,47 @@
 /* 밀크터치 | var.css */
 
+:root {
+    /* 데스크탑 */
+    --font-size-xxxs-d: 0.75rem; /* 12px */
+    --font-size-xxs-d: 0.875rem; /* 14px */
+    --font-size-xs-d: 1rem; /* 16px */
+    --font-size-sm-d: 1.125rem; /* 18px */
+    --font-size-md-d: 1.25rem; /* 20px */
+    --font-size-lg-d: 1.5rem; /* 24px */
+    --font-size-xl-d: 1.875rem; /* 30px */
+    --font-size-xxl-d: 2.25rem; /* 36px */
+    --font-size-xxxl-d: 3rem; /* 48px */
+    /* 태블릿 */
+    --font-size-xxs-t: ;
+    --font-size-xs-t: ;
+    --font-size-sm-t: ;
+    --font-size-md-t: ;
+    --font-size-lg-t: ;
+    --font-size-xl-t: ;
+    --font-size-xxl-t: ;
+    --font-size-xxxl-t: ;
+
+    /* 모바일 */
+    --font-size-xxs-m: ;
+    --font-size-xs-m: ; 
+    --font-size-sm-m: ; 
+    --font-size-md-m: ; 
+    --font-size-lg-m: ; 
+    --font-size-xl-m: ; 
+    --font-size-xxl-m: ;
+
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+
+    --bg-disable: #aaa;
+    --bg-basic: #fff;
+    --color-primary: #FA7171;
+    --color-detail: #888;
+}
+
 .flex_row_c_c {
     display: flex;
     flex-flow: row nowrap;
