@@ -238,6 +238,12 @@ hotPd();
 const hot_swiper = new Swiper('.hot_swiper',{
     slidesPerView:3,
     spaceBetween:10,
+    speed:2000,
+    loop:true,
+    autoplay:{
+        delay: 2000,         
+        disableOnInteraction: false,
+    },
     scrollbar: {
         el: '.hot_wrap .swiper-scrollbar',
         draggable: true,
@@ -353,6 +359,12 @@ newPd();
 const new_swiper = new Swiper('.new_swiper', {
     slidesPerView: 3,
     spaceBetween: 10,
+    speed:2000,
+    loop:true,
+    autoplay:{
+        delay: 2000,         
+        disableOnInteraction: false,
+    },
     scrollbar: {
         el: '.new_wrap .swiper-scrollbar',
         draggable: true,
