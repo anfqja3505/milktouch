@@ -7,6 +7,8 @@ const search_btn = document.querySelector('.search_btn') // 검색버튼
 const search_popup = document.querySelector('.search_popup') //검색창
 const m_t_menu_popup = document.querySelector('.m_t_menu_popup'); // 모바일, 태블릿 전체메뉴창
 const m_t_menu_btn = document.querySelector('.m_t_menu_btn'); // 모바일, 태블릿 전체메뉴버튼
+const wishlist_btn = document.querySelectorAll('.wishlist_btn') // 찜하기 버튼
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,6 +40,32 @@ menu_popup_close_btn.forEach(btn => {
         search_popup.classList.remove('active');
         m_t_menu_popup.classList.remove('active')
     });
+});
+
+//============================================= 찜하기 버튼
+wishlist_btn.forEach(wish => {
+    wish.addEventListener('click', () => {
+        const img = wish.querySelector('img');
+        if (img) {
+            if (img.src.includes('wishlist_after.svg')) {
+                img.src = '../images/icon/wishlist_before.svg';
+            } else {
+                img.src = '../images/icon/wishlist_after.svg';
+            }
+        }
+    });
+});
+
+document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.wishlist_btn');
+    if (!btn) return;
+    const img = btn.querySelector('img');
+    if (!img) return;
+    if (img.src.includes('wishlist_after.svg')) {
+        img.src = './images/icon/wishlist_before.svg';
+    } else {
+        img.src = './images/icon/wishlist_after.svg';
+    }
 });
 
 //====================================히어로
@@ -80,6 +108,7 @@ function bestPd() {
             <li class="product_item">
                 <div class="img_box">
                     <img src="${product.thumbnail}" alt="${product.name}">
+                    <button type="button" class="wishlist_btn"><img src="./images/icon/wishlist_before.svg" alt="찜하기"></button>
                 </div>
                 <div class="info_box">
                     <p class="product_name">${product.name}</p>
@@ -119,6 +148,7 @@ function bestPdSkincare() {
             <li class="product_item">
                 <div class="img_box">
                     <img src="${product.thumbnail}" alt="${product.name}">
+                    <button type="button" class="wishlist_btn"><img src="./images/icon/wishlist_before.svg" alt="찜하기"></button>
                 </div>
                 <div class="info_box">
                     <p class="product_name">${product.name}</p>
@@ -186,6 +216,7 @@ function hotPd() {
             <li class="swiper-slide product_item">
                 <div class="img_box">
                     <img src="${product.thumbnail}" alt="${product.name}">
+                    <button type="button" class="wishlist_btn"><img src="./images/icon/wishlist_before.svg" alt="찜하기"></button>
                 </div>
                 <div class="info_box">
                     <p class="product_name">${product.name}</p>
@@ -205,12 +236,18 @@ hotPd();
 
 //hot 스와이프
 const hot_swiper = new Swiper('.hot_swiper',{
-    slidesPerView:4,
+    slidesPerView:3,
     spaceBetween:10,
     scrollbar: {
         el: '.hot_wrap .swiper-scrollbar',
         draggable: true,
     },
+    breakpoints:{
+        900 :{
+            slidesPerView:4,
+            spaceBetween: 10,
+        }
+    }
 })
 
 //hot 스크롤트리거
@@ -234,6 +271,11 @@ gsap.fromTo("#hot_sec > h2, #hot_sec > p, #hot_sec .hot_thum, #hot_sec .hot_swip
 // 모바일 스와이프
 const lineBnr_swiper = new Swiper('#line_bnr_sec .line_bnr_m',{
     slidesPerView:1,
+    loop:true,
+    speed:1000,
+    autoplay:{
+        delay:3000,
+    },
 })
 
 // 띠배너 스크롤 트리거
@@ -289,6 +331,7 @@ function newPd() {
             <li class="swiper-slide product_item">
                 <div class="img_box">
                     <img src="${product.thumbnail}" alt="${product.name}">
+                    <button type="button" class="wishlist_btn"><img src="./images/icon/wishlist_before.svg" alt="찜하기"></button>
                 </div>
                 <div class="info_box">
                     <p class="product_name">${product.name}</p>
@@ -308,12 +351,18 @@ newPd();
 
 // 뉴 스와이프
 const new_swiper = new Swiper('.new_swiper', {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 10,
     scrollbar: {
         el: '.new_wrap .swiper-scrollbar',
         draggable: true,
     },
+    breakpoints:{
+        900 :{
+            slidesPerView:4,
+            spaceBetween: 10,
+        }
+    }
 });
 
 // 뉴 스크롤트리거

@@ -24,13 +24,15 @@
     --font-size-xxxl-t: 2.25rem; /* 36px */
 
     /* 모바일 */
-    --font-size-xxs-m: ;
+    --font-size-xxxs-m: 0.5rem; /* 8px */
+    --font-size-xxs-m: 0.625rem; /* 10px */
+    --font-size-xsm-m: 0.688rem; /* 11px */ 
     --font-size-xs-m: 0.75rem; /* 12px */ 
     --font-size-sm-m: 0.875rem; /* 14px */
     --font-size-md-m: ; 
     --font-size-lg-m: 1rem; /* 16px */ 
     --font-size-xl-m: 1.125rem; /* 18px */ 
-    --font-size-xxl-m: ;
+    --font-size-xxl-m: 1.25rem; /* 20px */
     --font-size-xxxl-m: ;
     --font-size-xxxxl-m: 1.625rem; /* 26px */
 
