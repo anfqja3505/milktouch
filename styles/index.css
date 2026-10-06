@@ -2,9 +2,15 @@
 
 html {scroll-behavior: smooth;}
 
-body {margin: 0 auto;}
+body {
+    margin: 0 auto;
+    width: 100%;
+}
 
-body * {overflow-x: hidden;}
+body * {
+    overflow-x: hidden;
+    min-width: 0;
+}
 
 /* ==================================================== 헤더 */
 header {
