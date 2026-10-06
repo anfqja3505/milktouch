@@ -4,6 +4,8 @@ html {scroll-behavior: smooth;}
 
 body {margin: 0 auto;}
 
+body * {overflow-x: hidden;}
+
 /* ==================================================== 헤더 */
 header {
     width: 100vw; padding: 18px 60px; 
